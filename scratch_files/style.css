@@ -1,0 +1,121 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #F5F5F5;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #FFCA28;
+}
+
+nav .menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h1 {
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #7F8C8D;
+    margin-bottom: 40px;
+}
+
+#projects .project-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #2C3E50;
+}
+
+.project-card p {
+    color: #7F8C8D;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0; /* Stay at the top */
+    left: 0; /* Stay at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center modal content vertically and horizontally */
+}
+
+.modal-content {
+    background-color: #fff; /* White background for modal content */
+    padding: 40px; /* Padding inside modal */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        background-color: #2C3E50; /* Background for mobile menu */
+        padding: 20px; /* Padding for mobile menu */
+        position: absolute; /* Positioning for dropdown menu */
+        top: 65px; /* Position below the nav bar */
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
+
+    nav .menu-toggle {
+        display: block; /* Show menu toggle button on mobile */
+    }
+}

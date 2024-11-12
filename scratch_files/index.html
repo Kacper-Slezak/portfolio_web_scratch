@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Kacper</title>
+</head>
+<body>
+<nav>
+    <div class="nav-links">
+        <a href="#about">O mnie</a>
+        <a href="#projects">Projekty</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+    <button class="menu-toggle">☰</button>
+</nav>
+
+<section id="about">
+    <h1>Cześć, jestem Kacper!</h1>
+    <p>Jestem studentem na kierunku Teleinformatyka na uczelni AGH. Posiadam podstawową wiedze z programowanie w pythonie, javie, c++ znam też dość dobrze technologie chmurową aWS oraz docker i kubernetes'a</p>
+</section>
+
+<section id="projects">
+    <h1>Moje Projekty</h1>
+    <div class="project-grid">
+        <div class="project-card" onclick="openModal('Projekt 1')">
+            <h3>Projekt 1</h3>
+            <p>Opis projektu 1.</p>
+        </div>
+        <div class="project-card" onclick="openModal('Projekt 2')">
+            <h3>Projekt 2</h3>
+            <p>Opis projektu 2.</p>
+        </div>
+        <!-- Add more project cards as needed -->
+    </div>
+</section>
+
+<section id="contact">
+    <h1>Skontaktuj się ze mną</h1>
+    <p>Chcesz się ze mną skontaktować? Napisz do mnie na adres kslezak022@gmail.com.</p>
+</section>
+
+<!-- Modal Structure -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <p>Więcej informacji o projekcie.</p>
+        <button class="close-button" onclick="closeModal()">X</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
